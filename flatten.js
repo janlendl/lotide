@@ -24,13 +24,13 @@ const eqArrays = function(array1, array2) {
 
 const flatten = function(array) {
   let flatArray = [];
-  for (let i = 0; i < array.length; i++) {
-    if (Array.isArray(array[i])) {
-      for (let j = 0; j < array[i].length; j++) {
-        flatArray.push(array[i][j]);
+  for (const element of array) {
+    if (Array.isArray(element)) {
+      for (const subElement of element) {
+        flatArray.push(subElement);
       }
     } else {
-      flatArray.push(array[i]);
+      flatArray.push(element);
     }
   }
   return flatArray;

@@ -24,19 +24,16 @@ const eqArrays = function(array1, array2) {
 
 const flatten = function(array) {
   let flatArray = [];
-  let nestedArray = [];
   for (let i = 0; i < array.length; i++) {
-    //console.log(array[i]);
     if (Array.isArray(array[i])) {
-      for (let x = 0; x <= array[i].length; x++) {
-        console.log(array[x]);
-        nestedArray.push(array[i][x]);
+      for (let j = 0; j < array[i].length; j++) {
+        flatArray.push(array[i][j]);
       }
     } else {
-      nestedArray.push(array[i]);
+      flatArray.push(array[i]);
     }
   }
-  return nestedArray;
+  return flatArray;
 };
 
-console.log(flatten(([1, 2, [3, 4], 5, [6]])));
+console.log(flatten(([1, 2, [3, 4], 5, ['lendl']])));

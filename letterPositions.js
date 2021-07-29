@@ -1,15 +1,19 @@
 const letterPositions = function(sentence) {
   const results = {};
-  for (const letter of sentence) {
-    if (letter !== ' ') {
-      if (results[letter]) {
-        results[letter] += 1;
-      } else {
-        results[letter] = 1;
+  for (const letter of sentence) { //for loop to extract each letter
+    for (let i = 0; i < sentence.length; i++) {
+      console.log(i);
+      if (letter !== ' ') { //if statement to make sure the space will not be counted
+        if (results[letter]) {
+          results[letter] += i;
+        } else {
+          results[letter] = i;
+        }
       }
     }
   }
   // logic to update results here
+  console.log(results);
   return results;
 };
 

@@ -8,8 +8,8 @@ const assertEqual = function(actual, expected) {
 
 const findKeyByValue = function (tvShows, value) {
   for (const genre of (Object.keys(tvShows))) {
-    let show = bestTVShowsByGenre[genre];
-    if (show === value) {
+    let show = bestTVShowsByGenre[genre]; //this will capture the object value
+    if (show === value) { //logical comparison
       return genre;
     }
   }

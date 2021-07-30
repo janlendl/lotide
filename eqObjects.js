@@ -11,11 +11,10 @@ const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) { //check first if both arrays have the same length
     tempHolder = false;
   } else { // for loop will run, both arrays have the same length
-    for (let i=0; i < array1.length; i++) {
+    for (let i = 0; i < array1.length; i++) {
       if (array1[i] === array2[i]) { //this will compare each element of the array
         tempHolder = true;
-      }
-      else {
+      } else {
         tempHolder = false;
       }
     }
@@ -27,18 +26,18 @@ const eqArrays = function(array1, array2) {
 //returns false otherwise
 const eqObjects = function(object1, object2) {
   let result = false;
-  if((Object.keys(object1).length) !== (Object.keys(object2).length)){
+  if ((Object.keys(object1).length) !== (Object.keys(object2).length)) {
     return result;
   }
 
   for (const key of (Object.keys(object1))) {
-    if(Array.isArray(object1[key] || Array.isArray(object2[key]))) {
+    if ((Array.isArray(object1[key]) && (Array.isArray(object2[key])))) {
       result = eqArrays(object1[key], object2[key]);
     } else if (object1[key] === object2[key]) {
-        result = true;
-      }
+      result = true;
+    }
   }
-  return result;  
+  return result;
 };
 
 

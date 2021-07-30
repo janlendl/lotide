@@ -26,13 +26,13 @@ const eqArrays = function(array1, array2) {
 //returns false otherwise
 const eqObjects = function(object1, object2) {
   let result = false;
-  if ((Object.keys(object1).length) !== (Object.keys(object2).length)) {
+  if ((Object.keys(object1).length) !== (Object.keys(object2).length)) { //array length checker
     return result;
   }
 
   for (const key of (Object.keys(object1))) {
-    if ((Array.isArray(object1[key]) && (Array.isArray(object2[key])))) {
-      result = eqArrays(object1[key], object2[key]);
+    if ((Array.isArray(object1[key]) && (Array.isArray(object2[key])))) { //check if key[value] is an array
+      result = eqArrays(object1[key], object2[key]); //call array function to check the arrays
     } else if (object1[key] === object2[key]) {
       result = true;
     }

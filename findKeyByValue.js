@@ -6,14 +6,15 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const findKeyByValue = function (tvShows) {
-  const genreType = {};
+const findKeyByValue = function (tvShows, value) {
   for (const genre of (Object.keys(tvShows))) {
-    console.log(genre);
+    let show = bestTVShowsByGenre[genre];
+    if (show === value) {
+      return genre;
+    }
   }
-
-  return genreType;
-}
+  return;
+};
 
 //test case
 const bestTVShowsByGenre = { 

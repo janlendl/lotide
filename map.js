@@ -1,5 +1,3 @@
-const words = ["ground", "control", "to", "major", "tom"];
-
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
@@ -34,7 +32,10 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
+
 const results1 = map(words, word => word[0]);
 console.log(results1);
 
+
+const words = ["ground", "control", "to", "major", "tom"];
 assertArraysEqual(map(words, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]);

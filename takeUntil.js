@@ -1,5 +1,5 @@
 const takeUntil = function(array, callback) {
-  const results = array.map(callback => callback);
+  const results = array.map(callback);
   return results
 };
 

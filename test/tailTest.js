@@ -10,7 +10,7 @@ describe('#tail', () => {
     assert.deepEqual(tail([1, 2, 3, 4]), [2, 3, 4]);
   });
 
-  it ('returns [5] for a single index of [5]', () => {
-    assert.deepEqual(tail([5]), [5]);
+  it ('returns a blank array [] for a single index of [5]', () => {
+    assert.deepEqual(tail([5]), []);
   });
 });

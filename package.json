@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/janlendl/lotide.git"
   },
-  "keywords": [lotide, lighthouselabs, mini lodash, janlendl, lendl],
+  "keywords": ["lotide", "lighthouselabs", "mini lodash", "janlendl", "lendl"],
   "author": "Jan Lendl Peralta <janlendl@gmail.com>",
   "license": "ISC",
   "bugs": {

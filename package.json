@@ -1,6 +1,6 @@
 {
   "name": "@janlendl/lotide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Lotide project : a mini version of Lodash library",
   "main": "index.js",
   "directories": {
